@@ -1,0 +1,113 @@
+================================================================
+DESIDERATA HAIR INSTITUTE — GUIA DE SUBSTITUIÇÃO DE MÍDIAS
+================================================================
+
+Todos os arquivos listados abaixo precisam ser criados/copiados
+para esta pasta /assets antes de publicar o site.
+
+----------------------------------------------------------------
+LOGO
+----------------------------------------------------------------
+logo.png            — Logo principal (escura/colorida)
+                      Dimensões: 320×120px (2× retina) → exibe em 160×60px
+                      Fundo: transparente (PNG)
+
+logo-branca.png     — Versão branca/clara da logo (para o footer escuro)
+                      Dimensões: 280×104px → exibe em 140×52px
+                      Fundo: transparente (PNG)
+
+----------------------------------------------------------------
+IMAGENS PRINCIPAIS
+----------------------------------------------------------------
+hero-bg.jpg         — Foto de destaque do Hero
+                      Dimensões: 1920×1080px mínimo
+                      Sugestão: foto do salão, equipe, ou cliente
+                      Otimize: use TinyPNG ou Squoosh antes de publicar
+
+hero-poster.jpg     — Thumbnail para o vídeo do hero (se usar vídeo)
+                      Dimensões: 1920×1080px
+
+cta-bg.jpg          — Foto de fundo da seção CTA final
+                      Dimensões: 1920×600px
+                      Sugestão: ambiente do salão ou resultado de serviço
+
+sobre-salao.jpg     — Foto do salão para a seção "Sobre"
+                      Dimensões: 800×600px (proporção 4:3)
+                      Sugestão: interior do salão, cadeiras, iluminação
+
+og-image.jpg        — Imagem de compartilhamento (Open Graph / WhatsApp)
+                      Dimensões: EXATAMENTE 1200×630px
+                      Deve ter logo + texto da marca visível
+
+----------------------------------------------------------------
+FOTOS DOS SERVIÇOS (pasta: assets/servicos/)
+----------------------------------------------------------------
+Crie a pasta: assets/servicos/
+
+corte.jpg           — Foto: corte de cabelo feminino        (600×400px)
+coloracao.jpg       — Foto: resultado de coloração          (600×400px)
+mechas.jpg          — Foto: mechas/balayage                 (600×400px)
+escova.jpg          — Foto: escova/alisamento               (600×400px)
+penteado.jpg        — Foto: penteado festa/noiva            (600×400px)
+realinhamento.jpg   — Foto: realinhamento/hidratação        (600×400px)
+maquiagem.jpg       — Foto: maquiagem artística/social      (600×400px)
+sobrancelha.jpg     — Foto: design de sobrancelha           (600×400px)
+manicure.jpg        — Foto: manicure/esmaltação gel         (600×400px)
+depilacao.jpg       — Foto: depilação                       (600×400px)
+bronzeamento.jpg    — Foto: bronzeamento                    (600×400px)
+noiva.jpg           — Foto: noiva (destaque)                (600×400px)
+
+----------------------------------------------------------------
+VÍDEOS DOS SERVIÇOS (opcional — substitui a foto em 3 cards)
+----------------------------------------------------------------
+servicos/mechas.mp4          — Vídeo do processo de mechas (máx 15s, sem áudio)
+servicos/mechas-poster.jpg   — Thumbnail do vídeo          (600×400px)
+servicos/realinhamento.mp4   — Vídeo de realinhamento
+servicos/realinhamento-poster.jpg
+servicos/noiva.mp4           — Vídeo dia da noiva
+servicos/noiva-poster.jpg
+
+Formato recomendado de vídeo:
+  - Codec: H.264 (MP4) + WebM como fallback
+  - Resolução: 1280×854px (máx)
+  - Tamanho: < 5MB por vídeo
+  - Sem áudio (autoplay silencioso)
+
+----------------------------------------------------------------
+FAVICON (gere em: https://realfavicongenerator.net/)
+----------------------------------------------------------------
+favicon-32x32.png
+favicon-16x16.png
+apple-touch-icon.png
+site.webmanifest
+
+----------------------------------------------------------------
+GOOGLE MAPS
+----------------------------------------------------------------
+No arquivo index.html, localize o comentário:
+  <!-- PLACEHOLDER: Substitua esta div pelo iframe do Google Maps -->
+
+E substitua pelo iframe gerado em:
+  https://www.google.com/maps/embed
+  (pesquise "Desiderata Hair Institute Lago Sul" → Compartilhar → Incorporar)
+
+----------------------------------------------------------------
+INFORMAÇÕES ADICIONAIS PARA PREENCHER NO HTML
+----------------------------------------------------------------
+1. Horário completo de funcionamento (section#localizacao)
+2. CNPJ real (footer)
+3. Links reais de Instagram e Facebook (footer)
+4. Depoimentos reais de clientes (section#avaliacoes)
+5. IDs do Google Ads no bloco de comentário do <head>
+6. Confirmar latitude/longitude exata no JSON-LD (structured data)
+
+----------------------------------------------------------------
+DICAS DE PERFORMANCE (Google Ads)
+----------------------------------------------------------------
+- Comprima todas as imagens com: https://squoosh.app/
+- Use formato WebP quando possível (adicione um fallback JPG)
+- O hero-bg.jpg é o LCP — priorize a qualidade e compressão dele
+- Não adicione JS de terceiros não essenciais
+- Teste com Google PageSpeed: https://pagespeed.web.dev/
+
+================================================================
