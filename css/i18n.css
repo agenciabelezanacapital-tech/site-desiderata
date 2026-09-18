@@ -1,0 +1,84 @@
+/* ============================================================
+   Seletor de idioma — bandeiras PT / EN / ES
+   Usa a paleta dourada definida em style.css
+   ============================================================ */
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+  padding: 0.25rem;
+  border: 1px solid rgba(192, 144, 64, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-switch__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 21px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: grayscale(60%);
+  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.lang-switch__btn svg {
+  display: block;
+  width: 22px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.lang-switch__btn:hover,
+.lang-switch__btn:focus-visible {
+  opacity: 0.95;
+  filter: grayscale(0%);
+  transform: translateY(-1px);
+}
+
+.lang-switch__btn:focus-visible {
+  outline: 2px solid var(--cor-dourado, #C09040);
+  outline-offset: 2px;
+}
+
+.lang-switch__btn.is-active {
+  opacity: 1;
+  filter: grayscale(0%);
+  box-shadow: 0 0 0 2px var(--cor-dourado, #C09040);
+}
+
+/* -------------------------------------------------- Header (desktop) */
+.lang-switch--header {
+  display: none;
+  margin-right: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .lang-switch--header {
+    display: inline-flex;
+  }
+}
+
+/* -------------------------------------------------- Menu mobile */
+.mobile-menu__lang {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 0 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu__lang {
+    display: none;
+  }
+}

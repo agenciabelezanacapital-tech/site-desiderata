@@ -54,6 +54,7 @@
 
   <!-- Folha de estilos principal -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/i18n.css">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17814389574"></script>
@@ -143,7 +144,7 @@
   <!-- ============================================================
        BOTÃO FLUTUANTE DE WHATSAPP (sticky, visível em todas as telas)
        ============================================================ -->
-  <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+  <a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
      class="whatsapp-float"
      target="_blank"
      rel="noopener noreferrer"
@@ -152,7 +153,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
-    <span>Agendar agora</span>
+    <span data-i18n="cta.agendarAgora">Agendar agora</span>
   </a>
 
   <!-- ============================================================
@@ -171,15 +172,22 @@
       <!-- NAV DESKTOP -->
       <nav class="header__nav" aria-label="Navegação principal">
         <ul class="nav__list" role="list">
-          <li><a href="#servicos" class="nav__link">Serviços</a></li>
-          <li><a href="#sobre" class="nav__link">Sobre</a></li>
-          <li><a href="#avaliacoes" class="nav__link">Avaliações</a></li>
-          <li><a href="#localizacao" class="nav__link">Localização</a></li>
+          <li><a href="#servicos" class="nav__link" data-i18n="nav.servicos">Serviços</a></li>
+          <li><a href="#sobre" class="nav__link" data-i18n="nav.sobre">Sobre</a></li>
+          <li><a href="#avaliacoes" class="nav__link" data-i18n="nav.avaliacoes">Avaliações</a></li>
+          <li><a href="#localizacao" class="nav__link" data-i18n="nav.localizacao">Localização</a></li>
         </ul>
       </nav>
 
+      <!-- SELETOR DE IDIOMA -->
+      <div class="lang-switch lang-switch--header" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Idioma">
+        <button type="button" class="lang-switch__btn" data-lang="pt" aria-pressed="true" data-i18n-attr="title:lang.pt,aria-label:lang.pt" title="Português"><svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#009b3a"/><path d="M14 2.6 25.4 10 14 17.4 2.6 10Z" fill="#fedf00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false" data-i18n-attr="title:lang.en,aria-label:lang.en" title="Inglês"><svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#fff"/><g fill="#b22234"><rect width="28" height="1.54" y="0"/><rect width="28" height="1.54" y="3.08"/><rect width="28" height="1.54" y="6.16"/><rect width="28" height="1.54" y="9.24"/><rect width="28" height="1.54" y="12.32"/><rect width="28" height="1.54" y="15.4"/><rect width="28" height="1.54" y="18.46"/></g><rect width="12" height="10.8" fill="#3c3b6e"/></svg></button>
+        <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="false" data-i18n-attr="title:lang.es,aria-label:lang.es" title="Espanhol"><svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#aa151b"/><rect width="28" height="10" y="5" fill="#f1bf00"/></svg></button>
+      </div>
+
       <!-- CTA HEADER -->
-      <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+      <a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
          class="btn btn--gold btn--sm header__cta"
          target="_blank"
          rel="noopener noreferrer"
@@ -187,7 +195,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="btn__icon">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
-        Agendar
+        <span data-i18n="cta.agendar">Agendar</span>
       </a>
 
       <!-- BOTÃO HAMBURGUER (mobile) -->
@@ -198,18 +206,25 @@
 
     <!-- MENU MOBILE -->
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile" hidden>
+      <div class="mobile-menu__lang">
+      <div class="lang-switch lang-switch--mobile" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Idioma">
+        <button type="button" class="lang-switch__btn" data-lang="pt" aria-pressed="true" data-i18n-attr="title:lang.pt,aria-label:lang.pt" title="Português"><svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#009b3a"/><path d="M14 2.6 25.4 10 14 17.4 2.6 10Z" fill="#fedf00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false" data-i18n-attr="title:lang.en,aria-label:lang.en" title="Inglês"><svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#fff"/><g fill="#b22234"><rect width="28" height="1.54" y="0"/><rect width="28" height="1.54" y="3.08"/><rect width="28" height="1.54" y="6.16"/><rect width="28" height="1.54" y="9.24"/><rect width="28" height="1.54" y="12.32"/><rect width="28" height="1.54" y="15.4"/><rect width="28" height="1.54" y="18.46"/></g><rect width="12" height="10.8" fill="#3c3b6e"/></svg></button>
+        <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="false" data-i18n-attr="title:lang.es,aria-label:lang.es" title="Espanhol"><svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#aa151b"/><rect width="28" height="10" y="5" fill="#f1bf00"/></svg></button>
+      </div>
+      </div>
       <ul class="mobile-menu__list" role="list">
-        <li><a href="#servicos" class="mobile-menu__link">Serviços</a></li>
-        <li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
-        <li><a href="#avaliacoes" class="mobile-menu__link">Avaliações</a></li>
-        <li><a href="#localizacao" class="mobile-menu__link">Localização</a></li>
+        <li><a href="#servicos" class="mobile-menu__link" data-i18n="nav.servicos">Serviços</a></li>
+        <li><a href="#sobre" class="mobile-menu__link" data-i18n="nav.sobre">Sobre</a></li>
+        <li><a href="#avaliacoes" class="mobile-menu__link" data-i18n="nav.avaliacoes">Avaliações</a></li>
+        <li><a href="#localizacao" class="mobile-menu__link" data-i18n="nav.localizacao">Localização</a></li>
         <li>
-          <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+          <a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
              class="btn btn--gold btn--full"
              target="_blank"
              rel="noopener noreferrer"
              onclick="return gtag_report_conversion(this.href);">
-            Agendar pelo WhatsApp
+            <span data-i18n="cta.agendarWhats">Agendar pelo WhatsApp</span>
           </a>
         </li>
       </ul>
@@ -227,21 +242,21 @@
         <div class="hero__content">
           <div class="hero__badge" aria-label="Avaliação 5 estrelas com 122 avaliações">
             <span class="stars" aria-hidden="true">★★★★★</span>
-            <span>5,0 · 122 avaliações no Google</span>
+            <span data-i18n="hero.badge">5,0 · 122 avaliações no Google</span>
           </div>
 
-          <h1 class="hero__headline" id="hero-headline">
+          <h1 class="hero__headline" id="hero-headline" data-i18n-html="hero.headline">
             O salão de beleza<br>
             <em>referência no Lago Sul</em>
           </h1>
 
-          <p class="hero__subheadline">
+          <p class="hero__subheadline" data-i18n="hero.sub">
             Experimente cuidados capilares e estética de alto padrão em Brasília.
             Equipe especializada, ambiente sofisticado e resultados que transformam.
           </p>
 
           <div class="hero__actions">
-            <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+            <a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
                class="btn btn--gold btn--lg"
                target="_blank"
                rel="noopener noreferrer"
@@ -249,11 +264,9 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="btn__icon">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
-              Agendar pelo WhatsApp
+              <span data-i18n="cta.agendarWhats">Agendar pelo WhatsApp</span>
             </a>
-            <a href="#servicos" class="btn btn--gold-outline btn--lg">
-              Ver serviços
-            </a>
+            <a href="#servicos" class="btn btn--gold-outline btn--lg" data-i18n="cta.verServicos">Ver serviços</a>
           </div>
         </div>
 
@@ -282,25 +295,25 @@
           </div>
           <div class="rating-highlight__info">
             <strong class="rating-highlight__score">5,0</strong>
-            <span class="rating-highlight__count">122 avaliações no Google</span>
+            <span class="rating-highlight__count" data-i18n="rating.count">122 avaliações no Google</span>
           </div>
           <a href="https://share.google/TkX3u4IZnDarvRMmg" target="_blank" rel="noopener noreferrer" class="rating-highlight__link" aria-label="Ver avaliações no Google Maps">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
               <path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z" fill="#4285F4"/>
             </svg>
-            Ver no Google
+            <span data-i18n="rating.link">Ver no Google</span>
           </a>
         </div>
 
-        <h2 class="section-title" id="avaliacoes-titulo">O que nossas clientes dizem</h2>
-        <p class="section-subtitle">Resultados reais de quem confia no Desiderata</p>
+        <h2 class="section-title" id="avaliacoes-titulo" data-i18n="reviews.title">O que nossas clientes dizem</h2>
+        <p class="section-subtitle" data-i18n="reviews.subtitle">Resultados reais de quem confia no Desiderata</p>
 
         <div class="testimonials-grid">
 
           <!-- DEPOIMENTO 1 — PLACEHOLDER: substitua pelo texto e nome real -->
           <article class="testimonial-card" aria-label="Depoimento de cliente">
             <div class="testimonial-card__stars" aria-label="Cinco estrelas">★★★★★</div>
-            <blockquote class="testimonial-card__text">
+            <blockquote class="testimonial-card__text" data-i18n="reviews.1">
               <!-- PLACEHOLDER: Cole aqui um depoimento real de Google/Instagram (máx. 3 linhas) -->
               "Melhor salão do Lago Sul sem dúvida! Fiz minhas mechas aqui e o resultado superou todas as expectativas. Ambiente incrível e atendimento impecável."
             </blockquote>
@@ -314,7 +327,7 @@
           <!-- DEPOIMENTO 2 — PLACEHOLDER -->
           <article class="testimonial-card" aria-label="Depoimento de cliente">
             <div class="testimonial-card__stars" aria-label="Cinco estrelas">★★★★★</div>
-            <blockquote class="testimonial-card__text">
+            <blockquote class="testimonial-card__text" data-i18n="reviews.2">
               <!-- PLACEHOLDER: Cole aqui um depoimento real -->
               "Sou cliente há anos e nunca fui a outro salão. A equipe é extremamente profissional e o resultado do meu corte + coloração é sempre perfeito."
             </blockquote>
@@ -328,7 +341,7 @@
           <!-- DEPOIMENTO 3 — PLACEHOLDER -->
           <article class="testimonial-card" aria-label="Depoimento de cliente">
             <div class="testimonial-card__stars" aria-label="Cinco estrelas">★★★★★</div>
-            <blockquote class="testimonial-card__text">
+            <blockquote class="testimonial-card__text" data-i18n="reviews.3">
               <!-- PLACEHOLDER: Cole aqui um depoimento real -->
               "Fiz meu dia da noiva aqui e foi simplesmente perfeito! Maquiagem, penteado, manicure – tudo impecável. Super indico para noivas!"
             </blockquote>
@@ -349,8 +362,8 @@
          ============================================================ -->
     <section class="services" id="servicos" aria-labelledby="servicos-titulo">
       <div class="container">
-        <h2 class="section-title" id="servicos-titulo">Nossos serviços</h2>
-        <p class="section-subtitle">Cuidado completo para cabelo, pele e beleza em um só lugar</p>
+        <h2 class="section-title" id="servicos-titulo" data-i18n="services.title">Nossos serviços</h2>
+        <p class="section-subtitle" data-i18n="services.subtitle">Cuidado completo para cabelo, pele e beleza em um só lugar</p>
 
         <div class="services-grid">
 
@@ -364,12 +377,12 @@
                    style="object-position: center top;">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Corte de Cabelo</h3>
-              <p class="service-card__desc">Cortes personalizados para valorizar seu tipo de rosto e estilo. Técnica e precisão em cada detalhe.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20Corte%20de%20Cabelo%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.corte.title">Corte de Cabelo</h3>
+              <p class="service-card__desc" data-i18n="svc.corte.desc">Cortes personalizados para valorizar seu tipo de rosto e estilo. Técnica e precisão em cada detalhe.</p>
+              <a data-wa="corte" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20Corte%20de%20Cabelo%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -382,12 +395,12 @@
                    loading="lazy">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Coloração & Pigmentação</h3>
-              <p class="service-card__desc">Coloração profissional com produtos de alta performance. Tons vivos, duradouros e com máximo cuidado para os fios.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Colora%C3%A7%C3%A3o%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.coloracao.title">Coloração & Pigmentação</h3>
+              <p class="service-card__desc" data-i18n="svc.coloracao.desc">Coloração profissional com produtos de alta performance. Tons vivos, duradouros e com máximo cuidado para os fios.</p>
+              <a data-wa="coloracao" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Colora%C3%A7%C3%A3o%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -400,12 +413,12 @@
                    loading="lazy">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Mechas & Luzes</h3>
-              <p class="service-card__desc">Técnicas modernas de mechas e iluminação: balayage, babylights, ombré e muito mais. Resultados naturais e sofisticados.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Mechas%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.mechas.title">Mechas & Luzes</h3>
+              <p class="service-card__desc" data-i18n="svc.mechas.desc">Técnicas modernas de mechas e iluminação: balayage, babylights, ombré e muito mais. Resultados naturais e sofisticados.</p>
+              <a data-wa="mechas" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Mechas%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -418,12 +431,12 @@
                    loading="lazy">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Escova & Progressiva</h3>
-              <p class="service-card__desc">Escova modeladora, escova progressiva e tratamentos de alisamento. Fios lisos, sedosos e sem frizz por mais tempo.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Escova%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.escova.title">Escova & Progressiva</h3>
+              <p class="service-card__desc" data-i18n="svc.escova.desc">Escova modeladora, escova progressiva e tratamentos de alisamento. Fios lisos, sedosos e sem frizz por mais tempo.</p>
+              <a data-wa="escova" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Escova%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -437,12 +450,12 @@
                    style="object-position: center 20%;">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Penteado</h3>
-              <p class="service-card__desc">Penteados para festas, formaturas, casamentos e eventos especiais. Do clássico ao contemporâneo, com elegância e durabilidade.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Penteado%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.penteado.title">Penteado</h3>
+              <p class="service-card__desc" data-i18n="svc.penteado.desc">Penteados para festas, formaturas, casamentos e eventos especiais. Do clássico ao contemporâneo, com elegância e durabilidade.</p>
+              <a data-wa="penteado" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Penteado%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -455,12 +468,12 @@
                    loading="lazy">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Realinhamento Capilar</h3>
-              <p class="service-card__desc">Tratamento que alinha, recupera e hidrata profundamente os fios. Resultado natural, com movimento e brilho intenso.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Realinhamento%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.realinhamento.title">Realinhamento Capilar</h3>
+              <p class="service-card__desc" data-i18n="svc.realinhamento.desc">Tratamento que alinha, recupera e hidrata profundamente os fios. Resultado natural, com movimento e brilho intenso.</p>
+              <a data-wa="realinhamento" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Realinhamento%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -474,12 +487,12 @@
                    style="object-position: center 15%;">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Maquiagem</h3>
-              <p class="service-card__desc">Maquiagem social e artística para eventos, festas e ocasiões especiais. Realçamos a sua beleza com produtos de alta qualidade.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Maquiagem%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.maquiagem.title">Maquiagem</h3>
+              <p class="service-card__desc" data-i18n="svc.maquiagem.desc">Maquiagem social e artística para eventos, festas e ocasiões especiais. Realçamos a sua beleza com produtos de alta qualidade.</p>
+              <a data-wa="maquiagem" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Maquiagem%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -493,12 +506,12 @@
                    style="object-position: center 15%;">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Design de Sobrancelha</h3>
-              <p class="service-card__desc">Design personalizado que valoriza o olhar e harmoniza com o rosto. Henna, micropigmentação e modelagem profissional.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Design%20de%20Sobrancelha%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.sobrancelha.title">Design de Sobrancelha</h3>
+              <p class="service-card__desc" data-i18n="svc.sobrancelha.desc">Design personalizado que valoriza o olhar e harmoniza com o rosto. Henna, micropigmentação e modelagem profissional.</p>
+              <a data-wa="sobrancelha" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Design%20de%20Sobrancelha%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -511,12 +524,12 @@
                    loading="lazy">
             </div>
             <div class="service-card__body">
-              <h3 class="service-card__title">Manicure & Pedicure</h3>
-              <p class="service-card__desc">Cuidados completos para mãos e pés com esmaltação em gel, spa e técnicas premium. Acabamento impecável e duradouro.</p>
-              <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Manicure%20no%20Desiderata."
+              <h3 class="service-card__title" data-i18n="svc.manicure.title">Manicure & Pedicure</h3>
+              <p class="service-card__desc" data-i18n="svc.manicure.desc">Cuidados completos para mãos e pés com esmaltação em gel, spa e técnicas premium. Acabamento impecável e duradouro.</p>
+              <a data-wa="manicure" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20Manicure%20no%20Desiderata."
                  class="btn btn--gold-outline btn--sm"
                  target="_blank" rel="noopener noreferrer"
-                 onclick="return gtag_report_conversion(this.href);">Agendar</a>
+                 onclick="return gtag_report_conversion(this.href);"><span data-i18n="cta.agendar">Agendar</span></a>
             </div>
           </article>
 
@@ -524,12 +537,12 @@
         </div><!-- /.services-grid -->
 
         <div class="services__cta-block">
-          <p>Não encontrou o que procura? Fale diretamente com nossa equipe.</p>
-          <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20Desiderata."
+          <p data-i18n="services.ctaText">Não encontrou o que procura? Fale diretamente com nossa equipe.</p>
+          <a data-wa="info" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20Desiderata."
              class="btn btn--gold btn--lg"
              target="_blank" rel="noopener noreferrer"
              onclick="return gtag_report_conversion(this.href);">
-            Fale com a gente pelo WhatsApp
+            <span data-i18n="services.ctaBtn">Fale com a gente pelo WhatsApp</span>
           </a>
         </div>
 
@@ -551,11 +564,11 @@
           </div>
 
           <div class="about__content">
-            <span class="about__eyebrow">Por que escolher o Desiderata?</span>
-            <h2 class="about__title" id="sobre-titulo">
+            <span class="about__eyebrow" data-i18n="about.eyebrow">Por que escolher o Desiderata?</span>
+            <h2 class="about__title" id="sobre-titulo" data-i18n-html="about.title">
               Sofisticação e excelência<br>no coração do Lago Sul
             </h2>
-            <p class="about__lead">
+            <p class="about__lead" data-i18n="about.lead">
               O Desiderata Hair Institute é referência em beleza premium em Brasília. Localizado no exclusivo Lago Sul, oferecemos uma experiência completa de cuidados capilares e estética em um ambiente elegante e acolhedor.
             </p>
 
@@ -563,38 +576,38 @@
               <li class="about__feature">
                 <span class="about__feature-icon" aria-hidden="true">◆</span>
                 <div>
-                  <strong>Equipe altamente especializada</strong>
-                  <p>Profissionais treinados nas melhores técnicas nacionais e internacionais, sempre em atualização constante.</p>
+                  <strong data-i18n="about.f1.title">Equipe altamente especializada</strong>
+                  <p data-i18n="about.f1.desc">Profissionais treinados nas melhores técnicas nacionais e internacionais, sempre em atualização constante.</p>
                 </div>
               </li>
               <li class="about__feature">
                 <span class="about__feature-icon" aria-hidden="true">◆</span>
                 <div>
-                  <strong>Localização privilegiada no Lago Sul</strong>
-                  <p>SHIS QI 11, Bloco G – ambiente planejado para seu conforto e praticidade, com estacionamento.</p>
+                  <strong data-i18n="about.f2.title">Localização privilegiada no Lago Sul</strong>
+                  <p data-i18n="about.f2.desc">SHIS QI 11, Bloco G – ambiente planejado para seu conforto e praticidade, com estacionamento.</p>
                 </div>
               </li>
               <li class="about__feature">
                 <span class="about__feature-icon" aria-hidden="true">◆</span>
                 <div>
-                  <strong>Produtos de alta performance</strong>
-                  <p>Utilizamos apenas marcas premium, garantindo saúde, brilho e longevidade para seus cabelos.</p>
+                  <strong data-i18n="about.f3.title">Produtos de alta performance</strong>
+                  <p data-i18n="about.f3.desc">Utilizamos apenas marcas premium, garantindo saúde, brilho e longevidade para seus cabelos.</p>
                 </div>
               </li>
               <li class="about__feature">
                 <span class="about__feature-icon" aria-hidden="true">◆</span>
                 <div>
-                  <strong>5,0 ⭐ no Google com 122 avaliações</strong>
-                  <p>Uma das melhores avaliações de salões de beleza em Brasília, reconhecida pela excelência do serviço.</p>
+                  <strong data-i18n="about.f4.title">5,0 ⭐ no Google com 122 avaliações</strong>
+                  <p data-i18n="about.f4.desc">Uma das melhores avaliações de salões de beleza em Brasília, reconhecida pela excelência do serviço.</p>
                 </div>
               </li>
             </ul>
 
-            <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+            <a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
                class="btn btn--gold btn--lg"
                target="_blank" rel="noopener noreferrer"
                onclick="return gtag_report_conversion(this.href);">
-              Agendar pelo WhatsApp
+              <span data-i18n="cta.agendarWhats">Agendar pelo WhatsApp</span>
             </a>
           </div>
 
@@ -607,8 +620,8 @@
          ============================================================ -->
     <section class="location" id="localizacao" aria-labelledby="localizacao-titulo">
       <div class="container">
-        <h2 class="section-title" id="localizacao-titulo">Como nos encontrar</h2>
-        <p class="section-subtitle">Estamos no coração do Lago Sul, aguardando por você</p>
+        <h2 class="section-title" id="localizacao-titulo" data-i18n="location.title">Como nos encontrar</h2>
+        <p class="section-subtitle" data-i18n="location.subtitle">Estamos no coração do Lago Sul, aguardando por você</p>
 
         <div class="location__grid">
 
@@ -622,8 +635,8 @@
                   </svg>
                 </span>
                 <div>
-                  <strong>Endereço</strong>
-                  <p>SHIS QI 11, Bloco G, Loja 37 (Subsolo)<br>Lago Sul – Brasília, DF<br>CEP 71625-560</p>
+                  <strong data-i18n="location.enderecoLabel">Endereço</strong>
+                  <p data-i18n-html="location.enderecoText">SHIS QI 11, Bloco G, Loja 37 (Subsolo)<br>Lago Sul – Brasília, DF<br>CEP 71625-560</p>
                 </div>
               </div>
             </address>
@@ -635,7 +648,7 @@
                 </svg>
               </span>
               <div>
-                <strong>Telefone / WhatsApp</strong>
+                <strong data-i18n="location.telLabel">Telefone / WhatsApp</strong>
                 <p>
                   <a href="tel:+5561996468282">(61) 99646-8282</a>
                 </p>
@@ -649,33 +662,33 @@
                 </svg>
               </span>
               <div>
-                <strong>Horário de funcionamento</strong>
+                <strong data-i18n="location.horarioLabel">Horário de funcionamento</strong>
                 <!-- PLACEHOLDER: Preencha com os horários reais -->
                 <table class="hours-table" aria-label="Horário de funcionamento">
                   <tbody>
                     <tr>
-                      <th scope="row">Segunda a Sexta</th>
+                      <th scope="row" data-i18n="location.segSex">Segunda a Sexta</th>
                       <td>09h00 – 19h00</td><!-- PLACEHOLDER: ajuste -->
                     </tr>
                     <tr>
-                      <th scope="row">Sábado</th>
+                      <th scope="row" data-i18n="location.sab">Sábado</th>
                       <td>09h00 – 17h00</td><!-- PLACEHOLDER: ajuste -->
                     </tr>
                     <tr>
-                      <th scope="row">Domingo</th>
-                      <td>Fechado</td><!-- PLACEHOLDER: ajuste -->
+                      <th scope="row" data-i18n="location.dom">Domingo</th>
+                      <td data-i18n="location.fechado">Fechado</td><!-- PLACEHOLDER: ajuste -->
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-            <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+            <a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
                class="btn btn--gold btn--lg"
                style="margin-top: 2rem;"
                target="_blank" rel="noopener noreferrer"
                onclick="return gtag_report_conversion(this.href);">
-              Agendar pelo WhatsApp
+              <span data-i18n="cta.agendarWhats">Agendar pelo WhatsApp</span>
             </a>
 
           </div>
@@ -715,28 +728,28 @@
       </div>
 
       <div class="container cta-final__content">
-        <h2 class="cta-final__title" id="cta-titulo">
+        <h2 class="cta-final__title" id="cta-titulo" data-i18n="ctaFinal.title">
           Pronta para se transformar?
         </h2>
-        <p class="cta-final__subtitle">
+        <p class="cta-final__subtitle" data-i18n="ctaFinal.sub">
           Agende agora pelo WhatsApp e garanta seu horário no salão mais elegante do Lago Sul.
           Nossa equipe está pronta para te receber.
         </p>
         <div class="cta-final__actions">
-          <a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+          <a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
              class="btn btn--gold btn--xl"
              target="_blank" rel="noopener noreferrer"
              onclick="return gtag_report_conversion(this.href);">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="btn__icon btn__icon--lg">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
-            Agendar pelo WhatsApp
+            <span data-i18n="cta.agendarWhats">Agendar pelo WhatsApp</span>
           </a>
           <a href="tel:+5561996468282" class="btn btn--outline-light btn--xl">
             (61) 99646-8282
           </a>
         </div>
-        <p class="cta-final__note">Aberto até as 19h · Lago Sul, Brasília</p>
+        <p class="cta-final__note" data-i18n="ctaFinal.note">Aberto até as 19h · Lago Sul, Brasília</p>
       </div>
     </section>
 
@@ -755,23 +768,23 @@
             <span class="logo-text__sub">hair institute</span>
           </span>
         </a>
-        <p class="footer__tagline">O salão de beleza premium do Lago Sul, Brasília.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">O salão de beleza premium do Lago Sul, Brasília.</p>
       </div>
 
       <div class="footer__nap">
-        <h3 class="footer__heading">Contato & Endereço</h3>
+        <h3 class="footer__heading" data-i18n="footer.contato">Contato &amp; Endereço</h3>
         <address>
-          <p>SHIS QI 11, Bloco G, Loja 37 (Subsolo)<br>
+          <p data-i18n-html="footer.endereco">SHIS QI 11, Bloco G, Loja 37 (Subsolo)<br>
              Lago Sul – Brasília, DF – CEP 71625-560</p>
           <p><a href="tel:+5561996468282">(61) 99646-8282</a></p>
-          <p><a href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
+          <p><a data-wa="geral" href="https://wa.me/5561996468282?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Desiderata."
                target="_blank" rel="noopener noreferrer"
                onclick="return gtag_report_conversion(this.href);">WhatsApp</a></p>
         </address>
       </div>
 
       <div class="footer__social">
-        <h3 class="footer__heading">Siga nas redes</h3>
+        <h3 class="footer__heading" data-i18n="footer.redes">Siga nas redes</h3>
         <div class="social-links">
           <a href="https://www.instagram.com/desideratabsb/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Desiderata Hair Institute">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
@@ -785,7 +798,7 @@
 
     <div class="footer__bottom">
       <div class="container">
-        <p>&copy; <span id="currentYear"></span> Desiderata Hair Institute. Todos os direitos reservados.</p>
+        <p>&copy; <span id="currentYear"></span> Desiderata Hair Institute. <span data-i18n="footer.copy">Todos os direitos reservados.</span></p>
         <p class="footer__credits">SHIS QI 11, Bloco G, Loja 37 – Lago Sul, Brasília – DF</p>
       </div>
     </div>
@@ -793,6 +806,7 @@
 
   <!-- Script principal -->
   <script src="js/main.js"></script>
+  <script src="js/i18n.js"></script>
 
 </body>
 </html>
